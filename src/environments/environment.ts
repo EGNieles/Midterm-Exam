@@ -6,11 +6,11 @@
 export const environment = {
   production: false,
   firebase: {
-  	apiKey: "",
-    authDomain: "",
-    databaseURL: "",
-    projectId: "",
-    storageBucket: "",
-    messagingSenderId: ""
+  	apiKey: "AIzaSyBMC2qRqSIvGZ786GgLlrH1szL_nM2BVVM",
+    authDomain: "crud-web-prog.firebaseapp.com",
+    databaseURL: "https://crud-web-prog.firebaseio.com",
+    projectId: "crud-web-prog",
+    storageBucket: "crud-web-prog.appspot.com",
+    messagingSenderId: "441012925374"
   }
 };

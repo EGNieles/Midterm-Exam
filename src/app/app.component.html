@@ -1,5 +1,90 @@
 <app-navbar></app-navbar>
 <div class="container">
-  <app-add-item></app-add-item>
+  <app-add-item>
+  	 <div class="sixteen wide column">
+        <form class="ui form segment" ng-submit="vm.addPatient()">
+            <h4>Patient information</h4>
+            <div class="field">
+                <label>Name</label>
+                <div class="three fields">
+                    <div class="field">
+                        <input type="text" placeholder="First Name" name="fname">
+                    </div>
+                    <div class="field">
+                        <input type="text" placeholder="Last Name" name="lname">
+                    </div>
+                    <div class="field">
+                        <input type="text" placeholder="Middle Name" name="mname">
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <div class="fields">
+                    <div class="six wide field">
+                        <label>Birthdate</label>
+                        <input type="date" name="bdate" ng-change="vm.computeAge()" ng-model="vm.birthdate">
+                    </div>
+                    <div class="two wide field">
+                        <label>Age</label>
+                        <input type="text" placeholder="Age" name="age" ng-model="vm.age" readonly="">
+                    </div>
+                    <div class="four wide field">
+                        <label>Gender</label>
+                        <select class="ui dropdown" name="gender">
+                            <option value="">Gender</option>
+                            <option value="102001">Male</option>
+                            <option value="102002">Female</option>
+                        </select>
+
+                    </div>
+                    <div class="four wide field">
+                        <label>Status</label>
+                        <select class="ui dropdown" name="status">
+                            <option value="">Status</option>
+                            <option value="103001">Married</option>
+                            <option value="103002">Widowed</option>
+                            <option value="103003">Single</option>
+                            <option value="103004">Minor</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+            <div class="field">
+                <div class="fields">
+                    <div class="seven wide field">
+                        <label>Company</label>
+                        <input type="text" placeholder="company" name="company">
+                    </div>
+                    <div class="three wide field">
+                        <label>Password</label>
+                        <input type="password" placeholder="password" name="password">
+                    </div>
+                    <div class="three wide field">
+                        <label>Phone</label>
+                        <input type="text" placeholder="Phone" name="phone">
+                    </div>
+                    <div class="three wide field">
+                        <label>Address</label>
+                        <input type="text" placeholder="Address" name="add">
+                    </div>
+
+                </div>
+            </div>
+            <div class="field">
+                <div class="fields">
+                    <div class="seven wide field">
+                        <label>Email</label>
+                        <input type="text" placeholder="samplemail@sample.com" name="email">
+                    </div>
+                </div>
+            </div>
+            <div class="actions">
+                <div class="ui primary submit button">Submit</div>
+                <div class="ui reset button">Clear</div>
+            </div>
+        </form>
+    </div>
+  </app-add-item>
   <app-items></app-items>
 </div>
